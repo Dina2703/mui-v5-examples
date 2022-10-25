@@ -1,7 +1,16 @@
 import { Button, Typography } from "@mui/material";
 import "./App.css";
+import { styled } from "@mui/material/styles";
 
 function App() {
+  //make a custom component with 'styled' func, by passing the MUI component you need to customize.
+  const MyCustomButton2 = styled(Button)({
+    boxShadow: 2,
+  });
+  const MyCustomButton = styled(Button)(({ theme }) => ({
+    padding: theme.spacing(2),
+  }));
+
   return (
     <div className="App">
       <h2>Hello</h2>
@@ -14,6 +23,12 @@ function App() {
       <Button variant="contained" color="secondary">
         Custom theme color 2
       </Button>
+      <MyCustomButton variant="contained" color="secondary">
+        Custom Button with MUI/styled (with theme)
+      </MyCustomButton>
+      <MyCustomButton2 variant="contained" color="secondary">
+        Custom Button with MUI/styled
+      </MyCustomButton2>
       <Typography variant="subtitle2" color="initial">
         Typography
       </Typography>
