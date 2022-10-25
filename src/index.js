@@ -2,10 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { ThemeProvider, createTheme } from "@mui/material";
+import { orange, red } from "@mui/material/colors";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#CCC",
+    },
+    secondary: {
+      main: orange[500],
+    },
+    myCustomColor: {
+      main: red[400],
+      superDark: red[800],
+      superLight: red[100],
+    },
+  },
+  typography: {
+    myVariant: {
+      fontSize: "6rem",
+      color: orange[800],
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
