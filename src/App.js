@@ -2,12 +2,14 @@ import "./App.css";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { orange, red } from "@mui/material/colors";
 import ThemeExample from "./components/Theme";
+import PaperExample from "./components/Paper";
+import RateExample from "./components/Rate";
 
 function App() {
   const theme = createTheme({
     spacing: 4,
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
         main: "#CCC",
       },
@@ -33,6 +35,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ThemeExample />
+
+        <PaperExample />
+        <RateExample />
       </ThemeProvider>
     </div>
   );
