@@ -7,6 +7,8 @@ function PaperExample() {
       <Typography variant="body2">Paper examples</Typography>
 
       <Box
+        alignItems="center"
+        justifyContent="center"
         sx={{
           display: "flex",
           flexWrap: "wrap",

@@ -4,12 +4,14 @@ import { orange, red } from "@mui/material/colors";
 import ThemeExample from "./components/Theme";
 import PaperExample from "./components/Paper";
 import RateExample from "./components/Rate";
+import BoxExample from "./components/BoxExample";
+import CardExample from "./components/CardExample";
 
 function App() {
   const theme = createTheme({
-    spacing: 4,
+    spacing: 8,
     palette: {
-      mode: "light",
+      mode: "dark",
       primary: {
         main: "#CCC",
       },
@@ -38,7 +40,10 @@ function App() {
 
         <PaperExample />
         <RateExample />
+        <BoxExample />
+        <CardExample />
       </ThemeProvider>
+      <CardExample />
     </div>
   );
 }
